@@ -5,7 +5,9 @@ from googletrans import Translator
 
 def personagens(request):
 
-    api_url = f"https://last-airbender-api.fly.dev/api/v1/characters"
+    pagina = request.GET.get('page', 1)
+    quantidade_por_pagina = 10
+    api_url = f'https://last-airbender-api.fly.dev/api/v1/characters?perPage={quantidade_por_pagina}&page={pagina}'
 
     response = requests.get(api_url)
 
@@ -19,4 +21,4 @@ def personagens(request):
         nome = p.get("name", "")
         p["name_traduzido"] = translator.translate(nome, dest="pt").text
 
-    return render(request, "index.html", {'personagem': personagem})
+    return render(request, "index.html", {'personagem': personagem, 'page': int(pagina)})
