@@ -1,21 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personagens</title>
+    <title>7 Days: Django!</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>Personagens Traduzidos</h1>
-    <ul>
-        {% for p in personagem %}
-            <li>
-                Nome: {{ p.name_traduzido }}<br>
-                Afiliação: {{ p.affiliacao_traduzida }}<br>
-                Aliados: {{ p.allies|last}}<br>
-                Inimigos: {{ p.enemies|last}}<br>
-            </li>
-        {% endfor %}
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://7daysofcode.io/assets/img/background-7days.1709759788.svg" width="30" height="30"
+                    class="d-inline-block align-top" alt="">
+                7 Days: Django!
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Afiliação</th>
+                    <th scope="col">Aliados</th>
+                    <th scope="col">Inimigos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in personagem %}
+                <tr>
+                    <td><img src="{{ p.photoUrl }}" alt="{{ p.name }}"
+                            class="img-fluid rounded-circle" style="width: 50px; height: 50px;"></td>
+                    <td>{{ p.name_traduzido }}</td>
+                    <td>{{ p.affiliacao_traduzida }}</td>
+                    <td>{{ p.allies|last }}</td>
+                    <td>{{ p.enemies|last }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
 </body>
+
 </html>
