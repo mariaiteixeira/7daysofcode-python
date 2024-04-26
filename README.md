@@ -21,11 +21,23 @@ Vamos consumir uma API de Avatar: A Lenda de Aang! Para isso, usaremos o Django 
 <img height="30" src="https://img.shields.io/badge/-boostrap-0D1117?style=for-the-badge&logo=bootstrap&labelColor=0D1117"> <img height="30" src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"> <img height="30" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"> <img height="30" src="https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white"> 
 
 ## Como reproduzir este repositório?
-Você pode fazer um `git clone` do repositório para a sua máquina, deste modo:
+* Você pode fazer um `git clone` do repositório para a sua máquina, deste modo:
 
 ```
 git clone https://github.com/mariaiteixeira/7daysofcode-python.git
 ```
+* Para instalar as bibliotecas:
+
+```
+pip install -r requirements.txt
+```
+
+* E, para rodar o projeto:
+
+```
+python manage.py runserver
+```
+
 
 ## Licença
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
