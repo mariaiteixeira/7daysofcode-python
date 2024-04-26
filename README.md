@@ -1,6 +1,6 @@
 # 7 Days of Code: Django!
 
-Projeto do [7 Days of Code com o Django/Python](https://7daysofcode.io/matricula/python-web), na plataforma da **[Alura](https://www.alura.com.br/)**.
+Projeto do [7 Days of Code com o Python para back-end](https://7daysofcode.io/matricula/python-web), na plataforma da **[Alura](https://www.alura.com.br/)**.
 
 <div align='center' style='display: inline_block'><img src="https://i.imgur.com/zXBV1Eq.gif" alt="Gif do código do repositório no VSCode, e após rodar a aplicação, no localhost com a porta 8000, no navegador Google Chrome."></div>
 
